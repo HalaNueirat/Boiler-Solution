@@ -1,0 +1,25 @@
+/* Main container for the Not Found component */
+.notfound-container {
+  text-align: center;
+  padding: 50px;
+}
+
+/* Sad icon styling */
+.notfound-icon {
+  font-size: 4rem;
+  color: var(--primary-taupe);
+}
+
+/* "404 Error" title styling */
+.notfound-title {
+  margin-top: 16px;
+}
+
+/* "Go Home" link styling */
+.notfound-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--primary-blue);
+}

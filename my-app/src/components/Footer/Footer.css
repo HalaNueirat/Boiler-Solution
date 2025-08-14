@@ -1,0 +1,201 @@
+/* === Footer styling === */
+
+/* Main footer container*/
+footer {
+  background-color: var(--primary-blue);
+  color: var(--text-inverse);
+  padding: 60px 0 30px;
+  font-size: 0.8rem;
+}
+
+/* Inner container layout */
+footer .container {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+/* Layout for the footer content area and footer bottom  */
+.footer-content,
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Shared footer link styles */
+footer a {
+  color: var(--text-inverse);
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Footer logo & address */
+.footer-content .footer-logo {
+  margin-bottom: 16px;
+  width: 120px;
+  animation: pulse 5s ease-in-out infinite;
+}
+.footer-content address {
+  font-style: normal;
+  line-height: 1.5;
+}
+
+/* Footer links styling */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  margin-top: 30px;
+}
+.footer-link i {
+  margin-left: 6px;
+}
+
+/* Footer column headings */
+.footer-column h4 {
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  margin-bottom: 23px;
+  color: var(--primary-blue);
+  text-shadow: -1px -1px 0 var(--text-inverse), 1px -1px 0 var(--text-inverse),
+    -1px 1px 0 var(--text-inverse), 1px 1px 0 var(--text-inverse);
+}
+.footer-column h4 button {
+  display: none;
+}
+
+/* Footer navigation list */
+
+.footer-column ul {
+  list-style: none;
+}
+.footer-column li {
+  margin-bottom: 8px;
+}
+
+/* Social media icons */
+.social-icons {
+  margin-top: 25px;
+  display: flex;
+  gap: 14px;
+}
+.social-icons a {
+  padding: 2px 5px;
+  border-radius: 3px;
+  color: var(--primary-blue);
+  background-color: var(--text-inverse);
+  font-size: 1rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Footer bottom section */
+.footer-bottom {
+  padding-top: 20px;
+  border-top: 2px solid var(--ui-bg-light-transparent);
+}
+
+.footer-legal .separator {
+  display: inline-block;
+  width: 1px;
+  height: 14px;
+  background-color: var(--text-inverse);
+  margin: 0 8px;
+  vertical-align: middle;
+}
+
+@media (max-width: 1024px) {
+  footer {
+    font-size: 0.9rem;
+  }
+  /* Stack columns vertically */
+  .footer-content {
+    flex-direction: column;
+  }
+
+  /* Footer column take the full width of its container */
+  .footer-column {
+    border-bottom: 1px solid var(--ui-bg-light-transparent);
+    width: 100%;
+  }
+
+  /* Left-column footer links become horizontal */
+  .footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  /* Headings become toggles */
+  .footer-column h4 {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    align-items: center;
+    padding: 30px 0;
+    margin-bottom: 0;
+  }
+  .footer-column h4 button {
+    display: block;
+  }
+
+  /* Hide navs by default, show on .active */
+  .footer-column .footer-nav {
+    display: none;
+  }
+  .footer-column .footer-nav.open {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  /* the arrow icon */
+  .footer-arrow {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    color: var(--primary-blue);
+    text-shadow: -1px -1px 0 var(--text-inverse), 1px -1px 0 var(--text-inverse),
+      -1px 1px 0 var(--text-inverse), 1px 1px 0 var(--text-inverse);
+  }
+
+  /* Social icons become larger */
+  .social-icons {
+    gap: 25px;
+  }
+  .social-icons a {
+    padding: 3px 5px;
+    border-radius: 4px;
+    font-size: 1.5rem;
+  }
+
+  /* Stack bottom section vertically */
+  .footer-bottom {
+    padding-bottom: 20px;
+    flex-direction: column-reverse;
+    gap: 15px;
+    border-top: none;
+  }
+}
+
+/* === Animations === */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.95;
+  }
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}

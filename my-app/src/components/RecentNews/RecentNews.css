@@ -1,0 +1,142 @@
+/* === Recent news section styles === */
+
+/* Section Header styling */
+.news-header {
+  margin-bottom: 1rem;
+}
+.news-header h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Styles and align the label that toggles news visibility */
+.news-header .view-all-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 0.2rem;
+}
+.news-header .view-label {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--primary-taupe);
+  text-decoration: none;
+}
+.news-header .view-label:hover {
+  color: var(--primary-blue);
+}
+.news-header .view-label i {
+  margin-left: 3px;
+  transition: transform 0.2s;
+}
+.news-header .view-label:hover i {
+  transform: translateX(4px);
+}
+
+/* Horizontal scrollable card layout */
+.cards-container.expanded {
+  display: flex;
+  gap: 1rem;
+}
+
+.cards-container.expanded {
+  flex-wrap: wrap;
+}
+
+/* Individual card styling */
+.cards-container.expanded .news-card,
+.swiper-slide .news-card {
+  flex: 0 0 32.3%;
+  border: 2px solid var(--ui-bg-light);
+  transition: all 0.2s ease;
+}
+.news-card:hover {
+  box-shadow: var(--shadow-primary);
+  transform: translateY(-10px);
+}
+
+/* Responsive image inside card */
+.cards-container.expanded .news-card img,
+.swiper-slide .news-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Content area inside the card */
+.news-card .news-content {
+  padding: 25px;
+}
+.news-card .news-content h3 {
+  font-size: 1rem;
+  margin: 0 0 12px;
+}
+.news-card .news-content p {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Read More link inside the card */
+.news-content .read-more {
+  font-weight: bold;
+  font-size: 0.88rem;
+  color: var(--primary-blue);
+  text-decoration: none;
+}
+.news-content .read-more i {
+  margin-left: 3px;
+  transition: transform 0.2s;
+}
+.news-content .read-more:hover i {
+  transform: translateX(4px);
+}
+
+/* Swiper navigation buttons */
+.recent-news .swiper-button-next,
+.recent-news .swiper-button-prev {
+  background-color: var(--primary-blue);
+  color: var(--text-inverse);
+  border-radius: 50%;
+  padding: 1rem;
+}
+.recent-news .swiper-button-next::after,
+.recent-news .swiper-button-prev::after {
+  font-size: 1.5rem;
+}
+
+/* Responsive adjustments for large tablets and small desktops */
+@media (min-width: 820px) and (max-width: 1358px) {
+  .cards-container.expanded .news-card {
+    flex-basis: 48.8%;
+  }
+}
+
+/* Responsive adjustments for small tablets */
+@media (min-width: 600px) and (max-width: 820px) {
+  .cards-container.expanded .news-card {
+    flex-basis: 48.5%;
+  }
+  .news-card .news-content h3 {
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
+  .news-header h2 {
+    margin-bottom: 1rem;
+  }
+  .cards-container.expanded {
+    gap: 1.1rem;
+  }
+  .cards-container.expanded .news-card {
+    flex-basis: 100%;
+  }
+}

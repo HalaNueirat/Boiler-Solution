@@ -1,0 +1,146 @@
+/* === Discover more section styles === */
+
+/* Header styling */
+.discover-header {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 1.5rem;
+}
+
+/* Container for the discover cards, displayed in a row with gaps */
+.discover-cards-container {
+  display: flex;
+  gap: 35px;
+}
+
+/* Individual discover card styling */
+.discover-card {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  box-shadow: var(--shadow-primary);
+  border-radius: 10px;
+}
+
+/* Zoom effect on card hover */
+.discover-card:hover {
+  transform: scale(1.02);
+}
+
+/* Background color for purple card */
+.purple-card {
+  background-color: var(--ui-purple-dark);
+}
+
+/* Background color for green card */
+.green-card {
+  background-color: var(--ui-green-teal);
+}
+
+/* Wrapper for the image inside the card */
+.discover-card figure {
+  flex: 1;
+}
+
+/* Styling for the card image */
+.discover-card .card-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Content container on the card's right side */
+.discover-card .card-content {
+  flex: 1;
+  padding: 30px 30px 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  color: var(--text-inverse);
+}
+
+/* Subtitle styling inside the card content */
+.discover-card .card-subtitle {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  margin-bottom: 60px;
+}
+
+/* Title styling inside the card content */
+.discover-card .card-title {
+  font-size: 1.9rem;
+  letter-spacing: 1px;
+}
+
+/* Paragraph text inside the card content */
+.discover-card .card-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Learn more link styling */
+.discover-card .learn-more {
+  text-decoration: none;
+  color: inherit;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: transform 0.3s ease;
+  margin-top: 0;
+}
+.discover-card .learn-more i {
+  transition: transform 0.3s ease;
+}
+.discover-card .learn-more:hover i {
+  transform: translateX(5px);
+}
+
+/* Swap button styling */
+.swap-btn {
+  align-self: center;
+  justify-self: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: var(--primary-blue);
+  color: var(--text-inverse);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+.swap-btn:hover {
+  transform: scale(1.06);
+}
+
+/* Responsive adjustments for small tablets and mobile*/
+@media (max-width: 820px) {
+  /* Stack cards vertically */
+  .discover-cards-container {
+    flex-direction: column;
+  }
+  
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
+  .discover-card .card-subtitle {
+    font-size: 0.75rem;
+  }
+
+  .discover-card .card-title {
+    font-size: 1.2rem;
+  }
+
+  .discover-card .card-text {
+    font-size: 0.85rem;
+  }
+  .discover-card .learn-more {
+    font-size: 0.8rem;
+  }
+}

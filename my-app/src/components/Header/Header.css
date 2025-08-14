@@ -1,0 +1,434 @@
+/* === Desktop styles === */
+
+/* Top message bar */
+.top-message-bar {
+  background-color: var(--ui-bg-light);
+  padding: 2rem 0;
+  font-size: 0.91rem;
+  text-align: center;
+}
+.top-message-bar a {
+  color: var(--text-default);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hide mobile header bar and sidebar header */
+.mobile-header-bar,
+.sidebar-header {
+  display: none;
+}
+
+/* Utility navbar */
+.utility-nav-row {
+  background-color: var(--ui-bg-light-transparent);
+}
+
+#utility-nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 3rem;
+  list-style-type: none;
+  margin-right: 0.8rem;
+}
+#utility-nav li a {
+  display: block;
+  padding: 0.7rem 0;
+  color: var(--primary-blue);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+#utility-nav li a:hover {
+  color: var(--primary-red);
+}
+
+/* Main navigation row */
+.main-nav-row {
+  box-shadow: var(--shadow-primary);
+  border-bottom: 0.4rem solid var(--primary-red);
+}
+.main-nav-row > .container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  position: relative;
+}
+
+/* XNGAGE logo */
+.logo-link {
+  display: block;
+}
+.logo {
+  height: 30px;
+  margin-top: 0.2rem;
+}
+
+/* Main navigation bar*/
+#main-nav {
+  margin-left: 3.2rem;
+}
+#main-nav > ul {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+}
+#main-nav > ul > li > a {
+  display: block;
+  position: relative;
+  padding: 0.9rem;
+  color: var(--primary-blue);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1rem;
+  text-decoration: none;
+  z-index: 1;
+}
+#main-nav > ul > li > a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--ui-bg-light-transparent);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+#main-nav > ul > li > a:hover::before {
+  transform: scaleX(1);
+}
+#main-nav > ul > li > a.active {
+  color: var(--primary-red);
+}
+.menu-item-with-dropdown {
+  display: flex;
+  justify-content: center;
+}
+.menu-item-with-dropdown .dropdown-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--primary-blue);
+}
+.mobile-only {
+  display: none;
+}
+
+/* === Products Menu === */
+
+/* Overlay shown behind the dropdown to darken background */
+.nav-overlay {
+  position: fixed;
+  top: 198px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 4;
+}
+
+/* Dropdown panel */
+.products-dropdown-panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--text-inverse);
+  border-top: 0.4rem solid var(--primary-red);
+  box-shadow: var(--shadow-primary);
+  z-index: 5;
+}
+
+/* Grid layout for the dropdown contents */
+.products-dropdown-panel > .container {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr 1.4fr;
+  gap: 32px;
+  padding-right: 0;
+}
+
+/* Shared group styles inside dropdown */
+.products-dropdown-group {
+  padding: 55px 0;
+}
+
+/* Borders for first two groups */
+.products-dropdown-group:nth-child(1),
+.products-dropdown-group:nth-child(2) {
+  border-right: 1px solid var(--ui-bg-light);
+  padding-right: 32px;
+  margin-right: -1px;
+}
+
+/* heading inside group */
+.products-dropdown-group h4 {
+  font-size: 0.95rem;
+  color: var(--primary-taupe);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Unordered lists for product links */
+.products-dropdown-group ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Individual product links */
+.products-dropdown-group ul li a {
+  text-decoration: none;
+  color: var(--primary-blue);
+  font-weight: bold;
+}
+
+/*  Last column in the products dropdown */
+.products-dropdown-group:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 0;
+  padding-left: 20px;
+  background-color: var(--ui-bg-light-transparent-50);
+}
+
+/* Heading inside the last column */
+.products-dropdown-group:last-child h5 {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: var(--primary-blue);
+}
+
+/* Image inside the last column */
+.products-dropdown-group:last-child img {
+  width: 100%;
+  height: 300px;
+}
+
+/* Link inside the last column */
+.products-dropdown-group:last-child a {
+  display: inline-block;
+  color: var(--primary-taupe);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Search box*/
+.search-box {
+  padding: 0.9rem;
+  color: var(--primary-blue);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.search-box i {
+  margin-left: 0.5rem;
+}
+
+/* Responsive adjustments for mid-sized desktops */
+@media (min-width: 1025px) and (max-width: 1329px) {
+  .top-message-bar {
+    font-size: 0.8rem;
+  }
+  #utility-nav ul {
+    font-size: 0.8rem;
+    gap: 1rem;
+  }
+  .logo {
+    height: 20px;
+  }
+  #main-nav {
+    margin-left: 1rem;
+  }
+  #main-nav > ul {
+    gap: 0.2rem;
+  }
+  #main-nav > ul > li > a,
+  .search-box {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+  }
+  .search-box i {
+    margin-left: 0.2rem;
+  }
+}
+
+/* === Mobile and tablet styles === */
+@media (max-width: 1024px) {
+  .utility-nav-row .container,
+  .main-nav-row > .container {
+    padding: 0;
+  }
+
+  /* Hide Navigation links and logo, search inside main-nav-row */
+  #main-nav,
+  #utility-nav,
+  .main-nav-row .logo-link,
+  .main-nav-row .search-box,
+  .menu-item-with-dropdown .dropdown-toggle {
+    display: none;
+  }
+  .menu-item-with-dropdown {
+    display: block;
+  }
+
+  /* Show mobile header bar */
+  .mobile-header-bar {
+    display: block;
+    box-shadow: var(--shadow-primary);
+    border-bottom: 0.4rem solid var(--primary-red);
+  }
+
+  /* Flex layout for header bar */
+  .mobile-header-bar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  /* Menu icon */
+  .mobile-header-bar .menu-icon {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--primary-blue);
+    cursor: pointer;
+  }
+
+  /* Change icon color */
+  .mobile-header-bar .menu-icon:hover,
+  .mobile-header-bar .search-box:hover,
+  .sidebar .close-icon:hover {
+    color: var(--primary-red);
+  }
+
+  /* Reduce logo height*/
+  .logo {
+    height: 28px;
+  }
+
+  /* Search icon */
+  .mobile-header-bar i {
+    font-size: 1.8rem;
+    color: var(--primary-blue);
+  }
+
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 89vw;
+    height: 100vh;
+    background-color: var(--text-inverse);
+    transform: translateX(0);
+    transition: transform 0.1s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  /* Sidebar header with logo and close icon */
+  .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 0.3rem solid var(--primary-red);
+    order: 1;
+  }
+  /* XNGAGE logo */
+  .sidebar-header img {
+    height: 25px;
+  }
+  /* Close icon */
+  .sidebar .close-icon {
+    font-size: 2rem;
+    color: var(--primary-blue);
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0.5rem;
+  }
+
+  /* Sidebar Navigation Menus */
+  .utility-nav-row {
+    order: 3;
+    flex-grow: 1;
+  }
+  .main-nav-row {
+    order: 2;
+    border-bottom: none;
+    box-shadow: none;
+  }
+  #utility-nav,
+  #main-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  #main-nav {
+    margin-left: 0;
+  }
+
+  /* Sidebar List Styles */
+  #utility-nav ul,
+  #main-nav > ul {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+    gap: 0;
+  }
+  #main-nav > ul > li {
+    border-bottom: 0.1rem solid var(--ui-bg-light);
+  }
+  #utility-nav ul a,
+  #main-nav > ul > li > a {
+    padding: 1.5rem;
+  }
+
+  /* Right arrow icon on main nav links */
+  #main-nav > ul > li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #main-nav .mobile-only {
+    display: inline-block;
+    font-size: 1.2rem;
+  }
+
+  .desktop-nav-area {
+    display: none;
+  }
+}
+
+/* === Tablet view adjustments === */
+@media (min-width: 601px) and (max-width: 1024px) {
+  /* Increase padding and logo height in sidebar header */
+  .sidebar-header {
+    padding: 1.5rem;
+  }
+  .sidebar-header .logo {
+    height: 31px;
+  }
+
+  /* Increase link padding and font size */
+  #utility-nav ul a {
+    padding: 2.4rem;
+    font-size: 1.2rem;
+  }
+  #main-nav > ul > li > a {
+    padding: 2.4rem;
+    font-size: 1.4rem;
+  }
+  /* Increase arrow icon size */
+  #main-nav .mobile-only {
+    font-size: 1.6rem;
+  }
+}

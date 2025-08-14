@@ -1,0 +1,213 @@
+/* === Products section styles === */
+
+/* Styles for the products header with a background image, centered text, and padding */
+#products .products-header {
+  position: relative;
+  background: url("https://picsum.photos/seed/productshero/1200/400")
+    center/cover no-repeat;
+  text-align: center;
+  color: var(--text-inverse);
+  padding: 4rem;
+}
+
+/* Dark overlay on header */
+#products .products-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+/* Header title styling */
+#products .products-header h2 {
+  font-size: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* === Featured categories subsection styles === */
+
+/* Featured categories header*/
+.featured-categories .categories-header {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+/* Grid layout for featured category cards */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* Make the entire card clickable */
+.category-card a {
+  text-decoration: none;
+  display: block;
+}
+
+/* Zoom effect on hover */
+.category-card a:hover figure {
+  transform: scale(1.1);
+}
+
+/* Figure container hover transition */
+.category-card figure {
+  transition: transform 0.3s ease;
+}
+
+/* Product image inside category card */
+.category-card img {
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 2rem;
+}
+
+/* Caption text below each image */
+.category-card figcaption {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--primary-blue);
+}
+
+/* Arrow icon next to caption */
+.category-card figcaption i {
+  margin-left: 3px;
+  vertical-align: middle;
+}
+
+/* === Recently viewed subsection styles === */
+
+/* Style for the recently viewed header */
+.recently-viewed-header {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Individual product card styling */
+.product-card {
+  flex: 0 0 297px;
+  border: 1px solid var(--ui-bg-light);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect for product card */
+.product-card:hover {
+  box-shadow: var(--shadow-primary);
+}
+
+/* Skewed blue ribbon with tag text on top-left of product card */
+.product-card::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: -8px;
+  width: 80%;
+  background: var(--ui-blue);
+  height: 28px;
+  transform: skewX(-30deg);
+  z-index: 1;
+}
+.product-card::after {
+  content: attr(data-tag);
+  position: absolute;
+  top: 13px;
+  left: 7px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transform: skewX(0deg);
+  z-index: 2;
+}
+
+/* Wrapper for product image */
+.product-card figure {
+  height: 300px;
+}
+
+/* Product image styling */
+.product-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Image zoom on hover */
+.product-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Info container below image */
+.product-info {
+  padding: 30px;
+  white-space: nowrap;
+}
+
+/* Product title */
+.product-info h4 {
+  font-size: 0.95rem;
+  margin-bottom: 32px;
+  color: var(--primary-blue);
+}
+
+/* Product part number */
+.product-info p {
+  font-size: 0.8rem;
+  margin-bottom: 32px;
+}
+
+/* Bold styling for "CB Part #" */
+.product-info span {
+  font-weight: bold;
+}
+
+/* Link to view product details */
+.product-link {
+  display: block;
+  padding: 10px;
+  background-color: var(--primary-blue);
+  color: var(--text-inverse);
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  transition: opacity 0.3s;
+}
+.product-link:active {
+  outline: 2px solid var(--primary-blue);
+  outline-offset: 4px;
+}
+
+/* Swiper navigation buttons */
+.recently-viewed .swiper-button-next,
+.recently-viewed .swiper-button-prev {
+  background-color: var(--primary-blue);
+  color: var(--text-inverse);
+  border-radius: 50%;
+  padding: 1rem;
+}
+.recently-viewed .swiper-button-next::after,
+.recently-viewed .swiper-button-prev::after {
+  font-size: 1.5rem;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 600px) {
+  /* Reduce padding on small screens */
+  #products .products-header {
+    padding: 3rem;
+  }
+
+  /* Decrease spacing below subsection headings and images */
+  .subsection-header,
+  .category-card img {
+    margin-bottom: 0.5rem;
+  }
+}

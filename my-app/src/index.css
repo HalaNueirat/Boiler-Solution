@@ -1,0 +1,74 @@
+/* Custom Fonts */
+@font-face {
+  font-family: "MyTupi";
+  src: url("./assets/fonts/Mytupi.woff2") format("woff2"),
+    url("./assets/fonts/Mytupi.woff") format("woff"),
+    url("./assets/fonts/Mytupi.ttf") format("truetype");
+}
+
+/* CSS Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--text-default);
+  font-family: "MyTupi", sans-serif;
+}
+
+/* Page Container */
+.container {
+  max-width: 1400px;
+  padding-left: 56px;
+  padding-right: 56px;
+  margin: 0 auto;
+}
+
+/* vertical spacing between sections */
+.section-spacing {
+  margin: 70px 0;
+}
+
+/* Adjust container padding for tablets and small screens */
+@media (max-width: 1024px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* Color Variables */
+:root {
+  /* Primary Colors */
+  --primary-blue: #003150;
+  --primary-red: #a2272f;
+  --primary-taupe: #82786f;
+
+  /* Text Colors */
+  --text-default: #1f1f1f;
+  --text-inverse: #ffffff;
+
+  /* Supplementary UI Colors */
+  --ui-bg-light: #d7d3c7;
+  --ui-bg-light-transparent: rgba(215, 211, 199, 0.2);
+  --ui-bg-light-transparent-50: rgba(215, 211, 199, 0.5);
+  --ui-blue: #d3dee4;
+  --ui-green-teal: #477f80;
+  --ui-purple-dark: #53284f;
+
+  /* Drop Shadows */
+  --shadow-primary: 0 0 8px 0 rgba(0, 49, 80, 0.25);
+}
+
+/* Loading Div Styles */
+.loading-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-blue);
+  height: 500px;
+  font-weight: bold;
+  font-size: 2rem;
+}

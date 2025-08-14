@@ -1,0 +1,182 @@
+/* === Video Section Desktop styles === */
+
+/* Flexbox layout */
+.video .container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+/* Info box positioned absolutely to overlap the video */
+.info-box {
+  background-color: var(--ui-bg-light);
+  padding: 38px;
+  max-width: 440px;
+  box-shadow: var(--shadow-primary);
+  position: absolute;
+  left: 56px;
+  z-index: 2;
+}
+
+/* Brand styling inside info box */
+.info-box .brand {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--primary-blue);
+  margin-bottom: 30px;
+  display: inline-block;
+}
+.info-box .brand .tm {
+  font-size: 0.2em;
+}
+
+/* Heading in the info box */
+.info-box h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Paragraph text inside the info box */
+.info-box p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* Wrapper for video with max width and relative position */
+.video-container {
+  width: 100%;
+  max-width: 850px;
+  box-shadow: var(--shadow-primary);
+  position: relative;
+}
+
+/* Make video scale responsively to container */
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Play and pause buttons over the video */
+.play-button,
+.pause-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background-color: var(--text-inverse);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  border: none;
+}
+
+
+/* Icons for play and pause buttons */
+.play-icon,
+.pause-icon {
+  font-size: 2.5rem;
+  color: var(--primary-blue);
+}
+
+/* Responsive adjustments for large tablets */
+@media (min-width: 820px) and (max-width: 1024px) {
+  /* Adjust info box position and size for large tablets*/
+  .info-box {
+    left: 16px;
+    max-width: 370px;
+    max-height: 300px;
+  }
+
+  /* Scale down brand, heading, and paragraph in info box */
+  .info-box .brand {
+    margin-bottom: 25px;
+  }
+  .info-box h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+  .info-box p {
+    font-size: 0.8rem;
+  }
+
+  /* Restrict video container width */
+  .video-container {
+    max-width: 650px;
+  }
+}
+
+/* Responsive adjustments for small tablets */
+@media (min-width: 600px) and (max-width: 820px) {
+  /* Adjust info box position and size for small tablets*/
+  .info-box {
+    left: 16px;
+    max-width: 300px;
+    max-height: 250px;
+  }
+
+  /* Scale down brand, heading, and paragraph in info box */
+  .info-box .brand {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  .info-box h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  .info-box p {
+    font-size: 0.75rem;
+  }
+
+  /* Restrict video container width */
+  .video-container {
+    max-width: 500px;
+  }
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
+  /* Stack elements vertically */
+  .video .container {
+    flex-direction: column;
+  }
+
+  /* Make info box full width and flow naturally in layout */
+  .info-box {
+    position: static;
+    width: 100%;
+    max-width: none;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* Scale down heading size */
+  .info-box h3 {
+    font-size: 1.2rem;
+  }
+
+  /* Make video container full width to fit small screens */
+  .video-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Resize play and pause buttons */
+  .play-button,
+  .pause-button {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Scale down icons inside play and pause buttons */
+  .play-icon,
+  .pause-icon {
+    font-size: 1.5rem;
+  }
+}

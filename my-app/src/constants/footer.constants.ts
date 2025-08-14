@@ -1,7 +1,8 @@
 import type {FooterData} from "../components/Footer/Footer.types";
+import logo from "/images/white-logo.svg";
 
 export const FOOTER_DATA: FooterData = {
-  logoSrc: "/images/white-logo.svg",
+  logoSrc: logo,
   logoAlt: "Xngage Logo",
   addressLines: ["221 Law St Thomasville,", "Georgia 31792"],
 

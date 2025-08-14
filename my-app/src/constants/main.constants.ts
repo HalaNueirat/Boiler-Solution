@@ -1,6 +1,10 @@
 import type {DiscoverItem} from "../components/Discover/Discover.types";
 import type {RecentNewsItem} from "../components/RecentNews/RecentNews.types";
 import type {SolutionItem} from "../components/Solutions/Solutions.types";
+import rental from "/images/rental-boiler.png";
+import emission from "/images/emission-boiler.png";
+import product from "/images/products-pattern.png";
+import cleaver from "/images/cleaver-brooks-group.png";
 
 export const SOLUTIONS: SolutionItem[] = [
   {
@@ -10,7 +14,7 @@ export const SOLUTIONS: SolutionItem[] = [
     subtitle: "We Provide. Nationwide.",
     description:
       "More than 1,500 CBRA representatives worldwide provide comprehensive, ongoing support—from commissioning your system, to providing parts and service after the sale, to product training.",
-    image: "/images/rental-boiler.png",
+    image: rental,
     imageAlt: "Cleaver Brooks Truck providing rental solutions",
   },
   {
@@ -20,7 +24,7 @@ export const SOLUTIONS: SolutionItem[] = [
     subtitle: "Lower Emissions.",
     description:
       "Cleaver-Brooks works with customers to custom tailor solutions that help them be more environmentally friendly, decrease fuel costs, increase efficiency, and meet ever stringent guidelines.",
-    image: "/images/emission-boiler.png",
+    image: emission,
     imageAlt: "Worker inspecting equipment for emission control",
     reverse: true,
   },
@@ -65,12 +69,11 @@ export const RECENT_NEWS: RecentNewsItem[] = [
   },
 ];
 
-
 export const DISCOVER_ITEMS: DiscoverItem[] = [
   {
     id: 1,
     palette: "purple",
-    image: "/images/products-pattern.png",
+    image: product,
     imageAlt: "Various Cleaver Brooks boiler system components",
     subtitle: "Product Index",
     title: "Have Something\nin Mind?",
@@ -79,7 +82,7 @@ export const DISCOVER_ITEMS: DiscoverItem[] = [
   {
     id: 2,
     palette: "green",
-    image: "/images/cleaver-brooks-group.png",
+    image: cleaver,
     imageAlt: "Cleaver Brooks Boiler House team",
     subtitle: "Find a Rep",
     title: "Over 1,500\nReps Worldwide",

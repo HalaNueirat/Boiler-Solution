@@ -1,6 +1,7 @@
 import React from "react";
 import {PRODUCTS_SECTIONS} from "../../../constants/header.constants";
 import NavList from "../../common/NavList";
+import boiler from "/images/boiler.png";
 
 const ProductsDropdownPanel: React.FC = () => {
   return (
@@ -20,7 +21,7 @@ const ProductsDropdownPanel: React.FC = () => {
         <div className="products-dropdown-group">
           <h5>Looking for more information?</h5>
           <img
-            src="/images/boiler.png"
+            src={boiler}
             width="400"
             height="300"
             alt="Boiler placeholder image"

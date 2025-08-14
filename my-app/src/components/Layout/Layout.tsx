@@ -4,7 +4,7 @@ import {Outlet} from "react-router-dom";
 import Footer from "../Footer/Footer";
 import {FOOTER_DATA} from "../../constants/footer.constants";
 
-const Layout = () => {
+const Layout: React.FC = () => {
   return (
     <>
       <Header />

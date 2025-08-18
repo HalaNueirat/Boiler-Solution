@@ -1,5 +1,5 @@
 import React from "react";
-import type {ICategoryCardProps} from "./Products.types";
+import type { ICategoryCardProps } from "../../types/products.types";
 
 const CategoryCard: React.FC<ICategoryCardProps> = ({Category}) => {
   return (

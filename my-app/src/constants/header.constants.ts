@@ -1,4 +1,5 @@
-import type {NavItem, NavSection} from "../components/Header/Header.types";
+import type { NavItem, NavSection } from "../types/header.types";
+
 
 export const UTILITY_ITEMS: NavItem[] = [
   {id: 0, label: "Find a Rep", href: "#", icon: "fas fa-user-tie"},

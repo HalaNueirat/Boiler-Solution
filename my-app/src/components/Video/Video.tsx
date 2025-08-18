@@ -1,8 +1,8 @@
 import React, {useRef, useState} from "react";
 import "./Video.css";
-import type {IVideoProps} from "./Video.types";
 import Section from "../common/Section";
 import PlayPauseButton from "./PlayPauseButton";
+import type { IVideoProps } from "../../types/video.types";
 
 const Video: React.FC<IVideoProps> = ({title, body, videoSrc}) => {
   const ref = useRef<HTMLVideoElement>(null);

@@ -1,12 +1,11 @@
 import React, {useState} from "react";
 import "./RecentNews.css";
 import NewsCard from "./NewsCard";
-import type {IRecentNewsProps} from "./RecentNews.types";
 import Section from "../common/Section";
-
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Navigation} from "swiper/modules";
 import "swiper/swiper-bundle.css";
+import type {IRecentNewsProps} from "../../types/news.types";
 
 const RecentNews: React.FC<IRecentNewsProps> = ({items}) => {
   const [expanded, setExpanded] = useState<boolean>(false);

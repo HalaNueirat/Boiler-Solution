@@ -77,7 +77,6 @@
   border: none;
 }
 
-
 /* Icons for play and pause buttons */
 .play-icon,
 .pause-icon {
@@ -113,40 +112,11 @@
 }
 
 /* Responsive adjustments for small tablets */
-@media (min-width: 600px) and (max-width: 820px) {
-  /* Adjust info box position and size for small tablets*/
-  .info-box {
-    left: 16px;
-    max-width: 300px;
-    max-height: 250px;
-  }
-
-  /* Scale down brand, heading, and paragraph in info box */
-  .info-box .brand {
-    font-size: 0.9rem;
-    margin-bottom: 20px;
-  }
-  .info-box h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-  }
-  .info-box p {
-    font-size: 0.75rem;
-  }
-
-  /* Restrict video container width */
-  .video-container {
-    max-width: 500px;
-  }
-}
-
-/* Responsive adjustments for mobile */
-@media (max-width: 600px) {
+@media (max-width: 820px) {
   /* Stack elements vertically */
   .video .container {
     flex-direction: column;
   }
-
   /* Make info box full width and flow naturally in layout */
   .info-box {
     position: static;
@@ -156,6 +126,11 @@
     margin-bottom: 20px;
   }
 
+  /* Scale down brand, heading, and paragraph in info box */
+  .info-box .brand {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
   /* Scale down heading size */
   .info-box h3 {
     font-size: 1.2rem;
@@ -166,7 +141,10 @@
     width: 100%;
     max-width: 100%;
   }
+}
 
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
   /* Resize play and pause buttons */
   .play-button,
   .pause-button {

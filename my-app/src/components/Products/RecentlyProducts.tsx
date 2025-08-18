@@ -1,10 +1,10 @@
 import React from "react";
-import type {IProductsProps} from "./Products.types";
 import RecentlyProductCard from "./RecentlyProductCard";
 
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Navigation} from "swiper/modules";
 import "swiper/swiper-bundle.css";
+import type { IProductsProps } from "../../types/products.types";
 
 const RecentlyProducts: React.FC<Omit<IProductsProps, "categories">> = ({
   products,

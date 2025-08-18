@@ -1,6 +1,5 @@
+import { mapCategoriesToFE, mapProductsBEToFE } from "../map/mappers";
 import {
-  mapCategoriesToFE,
-  mapProductsBEToFE,
   type ICategoryFE,
   type IProductBE,
   type IProductFE,

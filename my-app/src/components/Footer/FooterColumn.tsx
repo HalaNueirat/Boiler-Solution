@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import type {IFooterColumnProps} from "./Footer.types";
 import {isDesktop} from "react-device-detect";
+import type { IFooterColumnProps } from "../../types/footer.types";
 
 const FooterColumn: React.FC<IFooterColumnProps> = ({group}) => {
   const [open, setOpen] = useState<boolean>(false);

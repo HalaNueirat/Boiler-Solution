@@ -1,9 +1,9 @@
 import React from "react";
 import "./Discover.css";
-import type {IDiscoverProps} from "./Discover.types";
 import DiscoverCard from "./DiscoverCard";
 import Section from "../common/Section";
 import {useSwap} from "../../hooks/useSwap";
+import type { IDiscoverProps } from "../../types/Discover.types";
 
 const Discover: React.FC<IDiscoverProps> = ({items}) => {
   const {swapped, toggle} = useSwap();

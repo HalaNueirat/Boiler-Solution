@@ -1,8 +1,8 @@
 import React from "react";
 import "./Solutions.css";
-import type {ISolutionsProps} from "./Solutions.types";
 import SolutionCard from "./SolutionCard";
 import Section from "../common/Section";
+import type { ISolutionsProps } from "../../types/solutions.types";
 
 const Solutions: React.FC<ISolutionsProps> = ({solutions}) => {
   return (

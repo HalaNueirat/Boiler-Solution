@@ -1,9 +1,9 @@
 import React from "react";
 import "./Products.css";
-import type {IProductsProps} from "./Products.types";
 import FeaturedCategories from "./FeaturedCategories";
 import RecentlyProducts from "./RecentlyProducts";
 import Section from "../common/Section";
+import type { IProductsProps } from "../../types/products.types";
 
 const Products: React.FC<IProductsProps> = ({categories, products}) => {
   return (

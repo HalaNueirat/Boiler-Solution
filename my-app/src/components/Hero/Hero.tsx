@@ -1,7 +1,14 @@
 import React, {useEffect, useState} from "react";
 import "./Hero.css";
-import type {IHeroProps} from "./Hero.types";
 import Section from "../common/Section";
+
+interface IHeroProps {
+  images: string[];
+  highlight: string;
+  titleRemainder: string;
+  ctaHref?: string;
+  ctaLabel: string;
+}
 
 const Hero: React.FC<IHeroProps> = ({
   images,

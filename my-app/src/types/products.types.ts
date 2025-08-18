@@ -1,4 +1,4 @@
-import type {ICategoryFE, IProductFE} from "../../models/products.model";
+import type {ICategoryFE, IProductFE} from "../models/products.model";
 
 export interface ICategoryCardProps {
   Category: ICategoryFE;

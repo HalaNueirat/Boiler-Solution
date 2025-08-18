@@ -1,6 +1,6 @@
 import React from "react";
 import "./Discover.css";
-import type { IDiscoverCardProps } from "../../types/Discover.types";
+import type { IDiscoverCardProps } from "../../types/discover.types";
 
 const DiscoverCard: React.FC<IDiscoverCardProps> = ({item}) => {
   return (

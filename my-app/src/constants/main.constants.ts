@@ -1,11 +1,10 @@
-
 import rental from "/images/rental-boiler.png";
 import emission from "/images/emission-boiler.png";
 import product from "/images/products-pattern.png";
 import cleaver from "/images/cleaver-brooks-group.png";
-import type { SolutionItem } from "../types/solutions.types";
-import type { RecentNewsItem } from "../types/news.types";
-import type { DiscoverItem } from "../types/Discover.types";
+import type {SolutionItem} from "../types/solutions.types";
+import type {RecentNewsItem} from "../types/news.types";
+import type {DiscoverItem} from "../types/discover.types";
 
 export const SOLUTIONS: SolutionItem[] = [
   {

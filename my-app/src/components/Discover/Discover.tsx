@@ -3,7 +3,7 @@ import "./Discover.css";
 import DiscoverCard from "./DiscoverCard";
 import Section from "../common/Section";
 import {useSwap} from "../../hooks/useSwap";
-import type { IDiscoverProps } from "../../types/Discover.types";
+import type { IDiscoverProps } from "../../types/discover.types";
 
 const Discover: React.FC<IDiscoverProps> = ({items}) => {
   const {swapped, toggle} = useSwap();

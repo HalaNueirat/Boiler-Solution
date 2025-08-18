@@ -1,8 +1,10 @@
 import React from "react";
 import Logo from "../common/Logo";
-import type {IMobileHeaderBarProps} from "./Header.types";
+import {toggleSidebar} from "../../store/sidebar.slice";
+import {useAppDispatch} from "../../hooks/store/useAppDispatch";
 
-const MobileHeaderBar: React.FC<IMobileHeaderBarProps> = ({onMenuToggle}) => {
+const MobileHeaderBar: React.FC = () => {
+  const dispatch = useAppDispatch();
   return (
     <div className="mobile-header-bar">
       <div className="container">
@@ -11,7 +13,7 @@ const MobileHeaderBar: React.FC<IMobileHeaderBarProps> = ({onMenuToggle}) => {
           type="button"
           className="menu-icon"
           aria-label="Toggle menu"
-          onClick={onMenuToggle}
+          onClick={() => dispatch(toggleSidebar())}
         >
           <i className="fas fa-bars"></i>
         </button>

@@ -2,7 +2,6 @@ import type {NavItem} from "../Header/Header.types";
 
 export interface INavListProps {
   items: NavItem[];
-  onItemClick?: () => void;
 }
 
 export interface ISectionProps {

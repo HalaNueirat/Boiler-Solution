@@ -11,10 +11,3 @@ export interface NavSection {
   items: NavItem[];
 }
 
-export interface IMobileHeaderBarProps {
-  onMenuToggle: () => void;
-}
-
-export interface ISidebarCloseProps {
-  onSidebarClose?: () => void;
-}

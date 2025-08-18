@@ -2,9 +2,8 @@ import React from "react";
 import Logo from "../../common/Logo";
 import NavList from "../../common/NavList";
 import {MAIN_ITEMS} from "../../../constants/header.constants";
-import type {ISidebarCloseProps} from "../Header.types";
 
-const MainNav: React.FC<ISidebarCloseProps> = ({onSidebarClose}) => {
+const MainNav: React.FC = () => {
   return (
     <div className="main-nav-row">
       <div className="container">
@@ -13,7 +12,9 @@ const MainNav: React.FC<ISidebarCloseProps> = ({onSidebarClose}) => {
 
         {/* Main navigation links */}
         <nav id="main-nav" aria-label="Main Navigation">
-          <NavList items={MAIN_ITEMS} onItemClick={onSidebarClose} />
+          <NavList
+            items={MAIN_ITEMS}
+          />
         </nav>
 
         {/* Search box */}

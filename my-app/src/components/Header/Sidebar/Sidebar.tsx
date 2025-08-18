@@ -2,14 +2,13 @@ import React from "react";
 import SidebarHeader from "./SidebarHeader";
 import UtilityNav from "./UtilityNav";
 import MainNav from "./MainNav";
-import type {ISidebarCloseProps} from "../Header.types";
 
-const Sidebar: React.FC<ISidebarCloseProps> = ({onSidebarClose}) => {
+const Sidebar: React.FC = () => {
   return (
     <aside className="sidebar">
-      <SidebarHeader onSidebarClose={onSidebarClose} />
-      <UtilityNav onSidebarClose={onSidebarClose} />
-      <MainNav onSidebarClose={onSidebarClose} />
+      <SidebarHeader />
+      <UtilityNav />
+      <MainNav />
     </aside>
   );
 };

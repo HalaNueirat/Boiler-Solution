@@ -2,9 +2,12 @@ import React, {useState} from "react";
 import ProductsDropdownPanel from "../Header/Sidebar/ProductsDropdownPanel";
 import type {INavListProps} from "./common.types";
 import {NavLink} from "react-router-dom";
+import {closeSidebar} from "../../store/sidebar.slice";
+import {useAppDispatch} from "../../hooks/store/useAppDispatch";
 
-const NavList: React.FC<INavListProps> = ({items, onItemClick}) => {
+const NavList: React.FC<INavListProps> = ({items}) => {
   const [productsOpen, setProductsOpen] = useState<boolean>(false);
+  const dispatch = useAppDispatch();
 
   const handleCloseProducts = () => setProductsOpen(false);
   const handleToggleProducts = (e: React.MouseEvent) => {
@@ -19,7 +22,7 @@ const NavList: React.FC<INavListProps> = ({items, onItemClick}) => {
           <li className="menu-item-with-dropdown" key={item.id}>
             <NavLink
               to={item.href}
-              onClick={onItemClick}
+              onClick={() => dispatch(closeSidebar())}
               className={({isActive}) =>
                 isActive || productsOpen ? "active" : undefined
               }
@@ -55,7 +58,7 @@ const NavList: React.FC<INavListProps> = ({items, onItemClick}) => {
           <li key={item.id}>
             <NavLink
               to={item.href}
-              onClick={onItemClick}
+              onClick={() => dispatch(closeSidebar())}
               className={({isActive}) => (isActive ? "active" : undefined)}
             >
               {item.icon && <i className={item.icon} aria-hidden="true"></i>}

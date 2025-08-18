@@ -1,8 +1,8 @@
 import React from "react";
 import "./Footer.css";
-import type {IFooterProps} from "./Footer.types";
 import FooterColumn from "./FooterColumn";
 import SocialIcons from "./SocialIcons";
+import type { IFooterProps } from "../../types/footer.types";
 
 const Footer: React.FC<IFooterProps> = ({data}) => {
   const otherGroups = data.groups.filter((g) => g.title !== "Connect With Us");

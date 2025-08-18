@@ -1,5 +1,6 @@
 import React from "react";
-import type {IPlayPauseButtonProps} from "./Video.types";
+import type { IPlayPauseButtonProps } from "../../types/video.types";
+
 
 const PlayPauseButton: React.FC<IPlayPauseButtonProps> = ({
   isPlaying,

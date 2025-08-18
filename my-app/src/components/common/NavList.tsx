@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 import ProductsDropdownPanel from "../Header/Sidebar/ProductsDropdownPanel";
-import type {INavListProps} from "./common.types";
 import {NavLink} from "react-router-dom";
 import {closeSidebar} from "../../store/sidebar.slice";
 import {useAppDispatch} from "../../hooks/store/useAppDispatch";
+import type { INavListProps } from "../../types/common.types";
 
 const NavList: React.FC<INavListProps> = ({items}) => {
   const [productsOpen, setProductsOpen] = useState<boolean>(false);

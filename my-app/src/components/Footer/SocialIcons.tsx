@@ -1,5 +1,5 @@
 import React from "react";
-import type {SocialLink} from "./Footer.types";
+import type { SocialLink } from "../../types/footer.types";
 
 const SocialIcons: React.FC<{items: SocialLink[]}> = ({items}) => {
   return (

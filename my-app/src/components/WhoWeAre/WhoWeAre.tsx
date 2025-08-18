@@ -1,8 +1,15 @@
 import React, {useState} from "react";
 import "./WhoWeAre.css";
-import type {IWhoWeAreProps} from "./WhoWeAre.types";
 import Section from "../common/Section";
 import {isMobile} from "react-device-detect";
+
+interface IWhoWeAreProps {
+  title: string;
+  description: string;
+  ctaLabel: string;
+  ctaBody: string;
+  ctaHref?: string;
+}
 
 const WhoWeAre: React.FC<IWhoWeAreProps> = ({
   title,

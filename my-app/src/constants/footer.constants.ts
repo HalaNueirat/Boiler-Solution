@@ -1,4 +1,5 @@
-import type {FooterData} from "../components/Footer/Footer.types";
+
+import type { FooterData } from "../types/footer.types";
 import logo from "/images/white-logo.svg";
 
 export const FOOTER_DATA: FooterData = {

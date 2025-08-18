@@ -1,4 +1,5 @@
-import type {NavItem} from "../Header/Header.types";
+import type { NavItem } from "./header.types";
+
 
 export interface INavListProps {
   items: NavItem[];

@@ -1,5 +1,6 @@
 import React from "react";
-import type {ISectionProps} from "./common.types";
+import type { ISectionProps } from "../../types/common.types";
+
 
 const Section: React.FC<ISectionProps> = ({
   id,

@@ -1,5 +1,5 @@
 import React from "react";
-import type {ISolutionCardProps} from "./Solutions.types";
+import type { ISolutionCardProps } from "../../types/solutions.types";
 
 const SolutionCard: React.FC<ISolutionCardProps> = ({solution}) => {
   const Content = (

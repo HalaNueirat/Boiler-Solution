@@ -1,5 +1,5 @@
 import React from "react";
-import type {IProductCardProps} from "./Products.types";
+import type { IProductCardProps } from "../../types/products.types";
 
 const RecentlyProductCard: React.FC<IProductCardProps> = ({product}) => {
   return (

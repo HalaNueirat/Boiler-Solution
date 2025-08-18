@@ -1,5 +1,5 @@
 import React from "react";
-import type {INewsCardProps} from "./RecentNews.types";
+import type { INewsCardProps } from "../../types/news.types";
 
 const NewsCard: React.FC<INewsCardProps> = ({item}) => {
   return (

@@ -1,10 +1,10 @@
-import type {DiscoverItem} from "../components/Discover/Discover.types";
-import type {RecentNewsItem} from "../components/RecentNews/RecentNews.types";
-import type {SolutionItem} from "../components/Solutions/Solutions.types";
 import rental from "/images/rental-boiler.png";
 import emission from "/images/emission-boiler.png";
 import product from "/images/products-pattern.png";
 import cleaver from "/images/cleaver-brooks-group.png";
+import type {SolutionItem} from "../types/solutions.types";
+import type {RecentNewsItem} from "../types/news.types";
+import type {DiscoverItem} from "../types/discover.types";
 
 export const SOLUTIONS: SolutionItem[] = [
   {

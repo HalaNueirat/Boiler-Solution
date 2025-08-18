@@ -1,6 +1,6 @@
 import React from "react";
 import CategoryCard from "./CategoryCard";
-import type {IProductsProps} from "./Products.types";
+import type { IProductsProps } from "../../types/products.types";
 
 const FeaturedCategories: React.FC<Omit<IProductsProps, "products">> = ({
   categories,
